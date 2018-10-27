@@ -22,8 +22,8 @@ node {
       Properties proplist = new Properties()
       File proplistFile = new File('build-version.properties')
       proplistFile.withInputStream {
-      proplist.load(it)
-       }
+         proplist.load(it)
+         }
       x = proplist
   }
 
