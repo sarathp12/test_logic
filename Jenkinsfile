@@ -1,7 +1,7 @@
 #! /usr/bin/groovy
 
 node {
-   def workspace = pwd() 
+   load 'build-version-properties'
    def getMmpbValues = {
                Properties proplist = new Properties()
                File proplistFile = new File("build-version-properties")
