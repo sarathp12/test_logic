@@ -1,7 +1,7 @@
 #! /usr/bin/groovy
 
 node {
-   def currentDir = new File(".").getAbsolutePath()
+   def currentDir = new File("build-version.properties").getAbsolutePath()
    println currentDir 
    def getMmpbValues = {
                Properties proplist = new Properties()
