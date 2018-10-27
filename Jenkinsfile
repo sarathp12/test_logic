@@ -38,6 +38,7 @@ node {
     stage ('iteration') {
      x.each { key, value ->
      println "$value.$value.$value.$value"
+       }
     }
     stage ('print ieration') {
       def f = "${x.major}.${x.minor}.${x.patch}.${x.build}"
