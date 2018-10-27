@@ -4,7 +4,7 @@ import jenkins.model.*
 jenkins = Jenkins.instance
 
 @Library('my-shared-lib')_
-load "/src/build-version.properties"
 node {
+   load "/src/build-version.properties"
    sh 'cat build-version.properties'
 }
