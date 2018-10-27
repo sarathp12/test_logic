@@ -2,7 +2,6 @@
 import jenkins.model.*
 import java.io.File;
 import java.util.*;
-jenkins = Jenkins.instance
 
 @Library('my-shared-lib')_
 
