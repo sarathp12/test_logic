@@ -19,28 +19,29 @@ node {
    def y = getMmpbValues()
    println y
    */
-
-  stage ('Mmbp Values') {
-     def getMmpbValues = {
-        Properties proplist = new Properties()
-        File proplistFile = new File('build-version.properties')
-        proplistFile.withInputStream {
-           proplist.load(it)
-           }
-        x = proplist
-     }
-  }
-  stage ('print outs') {
-     println getMmpbValues()
-     println x
-     println x.minor
-  }
-  stage ('iteration') {
+  stages {
+    stage ('Mmbp Values') {
+       def getMmpbValues = {
+         Properties proplist = new Properties()
+         File proplistFile = new File('build-version.properties')
+         proplistFile.withInputStream {
+            proplist.load(it)
+            }
+         x = proplist
+       }
+    } 
+    stage ('print outs') {
+      println getMmpbValues()
+      println x
+      println x.minor
+    } 
+    stage ('iteration') {
      x.each { key, value ->
      println "$value.$value.$value.$value"
-  }
-  stage ('print ieration') {
-    def f = "${x.major}.${x.minor}.${x.patch}.${x.build}"
-    println f
-  }
+    }
+    stage ('print ieration') {
+      def f = "${x.major}.${x.minor}.${x.patch}.${x.build}"
+      println f
+    }  
+ }
 }
