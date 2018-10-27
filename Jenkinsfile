@@ -7,8 +7,9 @@ node {
                proplistFile.withInputStream {
                proplist.load(it)
                  }
-               y = proplist
+               return proplist
     }
    
+   def y = proplist
    println y
 }
