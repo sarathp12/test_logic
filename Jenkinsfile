@@ -1,4 +1,6 @@
 #! /usr/bin/groovy
+import jenkins.model.*
+jenkins = Jenkins.instance
 
 node {
    git branch: master, 'url: https://github.com/sarathp12/test_logic.git' 
