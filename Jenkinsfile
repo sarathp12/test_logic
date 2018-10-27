@@ -1,4 +1,4 @@
-#! /groovy
+
 
 node {
    git branch: master, 'url: https://github.com/sarathp12/test_logic.git' 
