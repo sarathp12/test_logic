@@ -10,6 +10,6 @@ node {
                return proplist
     }
    
-   def y = proplist
+   def y = getMmpbValues()
    println y
 }
