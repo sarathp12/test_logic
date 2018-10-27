@@ -3,7 +3,7 @@ import jenkins.model.*
 jenkins = Jenkins.instance
 
 node {
-   git branch: master, 'url: https://github.com/sarathp12/test_logic.git' 
+   git branch: master, url: 'https://github.com/sarathp12/test_logic.git' 
    load 'build-version-properties'
 
    /*
@@ -45,4 +45,4 @@ node {
     }  
  }
 }
-}
+
