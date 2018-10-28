@@ -8,10 +8,10 @@ node {
    sh 'cat build-version.properties'
 
    //file read step
-   Properties proplist = new Properties()
-   File proplistFile = new File("${workspace}/build-version.properties")
-   proplistFile.withInputStream {
-      proplist.load(it)
+   properties = new Properties()
+   File propertiesFile = new File("${workspace}/build-version.properties")
+   propertiesFile.withInputStream {
+      properties.load(it)
    }
    x = proplist
    println x
