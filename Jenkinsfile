@@ -5,7 +5,15 @@ import java.util.*;
 
 @Library('my-shared-lib')_
 
+properties = null
+
 node {
-   load 'src/build-version.properties'
+   Properties proplist = new Properties()
+   File proplistFile = new File("src/build-version.properties")
+   proplistFile.withInputStream {
+          proplist.load(it)
+          }
+   x = proplist
+   println x
    sh 'cat /src/build-version.properties'
 }
