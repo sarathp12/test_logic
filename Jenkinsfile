@@ -8,7 +8,8 @@ import java.util.*;
 properties = null
 
 node {
-   checkout scm   
+   checkout scm
+   load 'build-version.properties'   
    Properties proplist = new Properties()
    File proplistFile = new File("${workspace}/build-version.properties")
    proplistFile.withInputStream {
@@ -16,5 +17,5 @@ node {
           }
    x = proplist
    println x
-   sh 'cat /src/build-version.properties'
+   sh 'cat build-version.properties'
 }
