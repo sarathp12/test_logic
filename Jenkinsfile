@@ -8,8 +8,9 @@ import java.util.*;
 properties = null
 
 node {
+   checkout scm   
    Properties proplist = new Properties()
-   File proplistFile = new File('build-version.properties')
+   File proplistFile = new File("${workspace}/build-version.properties")
    proplistFile.withInputStream {
           proplist.load(it)
           }
