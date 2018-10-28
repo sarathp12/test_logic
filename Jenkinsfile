@@ -6,10 +6,8 @@ import java.util.*;
 
 @Library('my-shared-lib')_
 
-properties = null
 
 node {
-   checkout scm
    load 'build-version.properties'   
    sh 'cat build-version.properties'
 }
