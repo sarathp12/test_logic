@@ -12,7 +12,9 @@ node {
    File propertiesFile = new File("${workspace}/build-version.properties")
    propertiesFile.withInputStream {
       properties.load(it)
-   }
+    }
+   //con.close();
    x = proplist
    println x
-}
+ //con.close();
+ }
