@@ -4,17 +4,14 @@
 
 
 node {
-   load 'build-version.properties'   
-   sh 'cat build-version.properties'
-
    //file read step
-   properties = new Properties()
+   Properties properties = new Properties()
    File propertiesFile = new File("${workspace}/build-version.properties")
    propertiesFile.withInputStream {
       properties.load(it)
     }
    //con.close();
-   x = proplist
+   x = properties
    println x
  //con.close();
 }
