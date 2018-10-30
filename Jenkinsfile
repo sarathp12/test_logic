@@ -2,8 +2,9 @@
 
 @Library('my-shared-lib')_
 import org.android.*
+
 node {
   git url: 'https://github.com/sarathp12/test_logic.git'
-  def pl = new Pipeline()
+  pl = new newMmpbValues()
   pl.newMmpbValues()
 }
