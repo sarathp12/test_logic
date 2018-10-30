@@ -6,5 +6,6 @@ import org.android.*
 node {
   git url: 'https://github.com/sarathp12/test_logic.git'
   def pl = new workingMmpbValues() 
-  pl.valuesForMmpb()
+  pl.userInput()
+  pl.valuesIncrement()
 }
