@@ -4,5 +4,5 @@
 
 node {
   git url: 'https://github.com/sarathp12/test_logic.git' 
-  mmpbValues()  
+  newMmpbVals()  
 }
