@@ -5,6 +5,6 @@ import org.android.*
 
 node {
   git url: 'https://github.com/sarathp12/test_logic.git'
-  pl = new newMmpbValues()
-  pl.newMmpbValues()
+  pl = new workingMmpbValues() 
+  pl.workingMmpbValues()
 }
