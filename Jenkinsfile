@@ -4,6 +4,6 @@
 import org.android.*
 node {
   git url: 'https://github.com/sarathp12/test_logic.git'
-  pl = new Pipeline()
+  def pl = new Pipeline()
   pl.newMmpbValues()
 }
